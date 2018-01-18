@@ -6,8 +6,9 @@
 
 script/script = ExtResource( 1 )
 name = ""
-leben = 5
-angriff = 1
-verteidigung = 0
+max_leben = 5
+max_angriff = 1
+max_verteidigung = 0
+akt_level = 1
 
 

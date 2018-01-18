@@ -15,8 +15,8 @@ func startFight(att, def):
 	# 
 	
 	print("Aktueller Stand: ")
-	print("     Angreifer Leben: " + String(att.leben))
-	print("     Verteidiger Leben: " + String(def.leben))
+	print("     Angreifer Leben: " + String(att.akt_leben))
+	print("     Verteidiger Leben: " + String(def.akt_leben))
 	
 	print("Fight!")
 	
@@ -25,8 +25,8 @@ func startFight(att, def):
 	handleAttack(att, def)
 	
 	print("Aktueller Stand: ")
-	print("     Angreifer Leben: " + String(att.leben))
-	print("     Verteidiger Leben: " + String(def.leben))
+	print("     Angreifer Leben: " + String(att.akt_leben))
+	print("     Verteidiger Leben: " + String(def.akt_leben))
 	
 	
 	print("Ende des Kampfes")
@@ -43,8 +43,8 @@ func handleAttack(att, def):
 	# Animation abgespielt werden
 	#########################################################
 	
-	if def.verteidigung < att.angriff:
+	if def.akt_verteidigung < att.akt_angriff:
 		print("Angreifer greift an und hittet den verteidiger")
-		def.leben = def.leben - (att.angriff - def.verteidigung)
+		def.akt_leben = def.akt_leben - (att.akt_angriff - def.akt_verteidigung)
 	else:
 		print("Verteidiger hat zu viel Rüstung -> 0 dmg")

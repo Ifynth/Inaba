@@ -12,3 +12,4 @@ func getChar(name):
 	for node in get_children():
 		if node.name == name:
 			return node
+
