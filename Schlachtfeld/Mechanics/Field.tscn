@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Schlachtfeld/Mechanics/Field.gd" type="Script" id=1]
+[ext_resource path="res://Schlachtfeld/Mechanics/Background.gd" type="Script" id=2]
+[ext_resource path="res://Schlachtfeld/Mechanics/Cursor.tscn" type="PackedScene" id=3]
+
+[node name="TileMap" type="TileMap"]
+
+mode = 0
+tile_set = null
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray(  )
+script/script = ExtResource( 1 )
+width = 10
+height = 10
+
+[node name="Background" type="Sprite" parent="."]
+
+script/script = ExtResource( 2 )
+stroke = 2.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="Cursor" parent="." instance=ExtResource( 3 )]
+
+
