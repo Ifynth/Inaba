@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Charakter/Vorlage/Charakter.gd" type="Script" id=1]
+
+[node name="Charakter" type="Node2D"]
+
+script/script = ExtResource( 1 )
+name = ""
+leben = 5
+angriff = 1
+verteidigung = 0
+
+
